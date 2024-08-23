@@ -37,6 +37,29 @@
             color: white;
             text-decoration: none;
         }
+        #passwordForm {
+            margin-top: 20px;
+        }
+        input[type="password"] {
+            padding: 10px;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: gray;
+        }
         @media (max-width: 600px) {
             body {
                 padding: 30px 15px;
@@ -45,6 +68,12 @@
                 font-size: 1.8em;
             }
             p {
+                font-size: 1em;
+            }
+            input[type="password"] {
+                font-size: 1em;
+            }
+            button {
                 font-size: 1em;
             }
         }
@@ -62,5 +91,25 @@
             새로운 시작을 응원해요!
         </a>
     </p>
+
+    <!-- 암호 입력 폼 -->
+    <div id="passwordForm">
+        <input type="password" id="password" placeholder="암호를 입력하세요">
+        <button onclick="checkPassword()">입장</button>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const inputPassword = document.getElementById('password').value;
+            const correctPassword = "240823";  // 여기에 원하는 암호를 입력하세요
+            const redirectUrl = "nextpage.html"; // 암호가 맞을 때 이동할 페이지
+
+            if (inputPassword === correctPassword) {
+                window.location.href = redirectUrl;
+            } else {
+                alert("암호가 틀렸습니다.");
+            }
+        }
+    </script>
 </body>
 </html>
