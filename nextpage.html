@@ -17,6 +17,11 @@
             margin-bottom: 20px;
             font-size: 2.2em;
         }
+        .fixed-size-video {
+            width: 1080px;
+            height: 720px;
+            object-fit: cover; /* 필요 시 비디오 크기 조정 방법 */
+        }
         .album-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -47,7 +52,7 @@
         <img src="사진3.jpeg">
         <img src="사진5.jpeg">
         <img src="사진6.jpeg">
-        <video src="사진1.mp4" autoplay muted loop></video>
+        <video src="사진1.mp4" autoplay muted loop class="fixed-size-video"></video>
         <video src="사진4.mp4" autoplay muted loop></video>
         <img src="사진7.jpg">
     </div>
